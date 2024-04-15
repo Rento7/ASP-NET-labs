@@ -1,0 +1,69 @@
+﻿@using AspLab1.Models
+@{
+    ViewData["Title"] = "Car Page";
+    string[] validationErrors = TempData["ValidationErrors"] as string[];
+}
+
+@model CarViewModel
+
+<div>
+    @await Component.InvokeAsync("CarsViewModelList")
+</div>
+
+<hr />
+<h4>Post form</h4>
+
+<div style="border:2px solid; padding:8px">
+
+    <form method="post" asp-action="Create">
+        <p>
+            <label asp-for="OwnerFullName">Full name:</label><br />
+            <input type="text" asp-for="OwnerFullName" />
+            <span asp-validation-for="OwnerFullName" />
+        </p>
+        <p>
+            <label asp-for="Name">Model name:</label><br />
+            <input type="text" asp-for="Name" />
+            <span asp-validation-for="Name" />
+        </p>
+
+        <p>
+            <label asp-for="RegistrationPlate">Registration plate:</label><br />
+            <input type="text" asp-for="RegistrationPlate" />
+            <span asp-validation-for="RegistrationPlate" />
+        </p>
+        <p>
+            <label asp-for="EngineVolume">Engine volume:</label><br />
+            <input type="number" asp-for="EngineVolume" />
+            <span asp-validation-for="EngineVolume" />
+        </p>
+        <p>
+            <label asp-for="Mileage">Mileage:</label><br />
+            <input type="number" asp-for="Mileage" />
+            <span asp-validation-for="Mileage" />
+        </p>
+
+        <p>
+            <label asp-for="Drivetrain">Drivetrain:</label><br />
+            <select asp-for="Drivetrain">
+                <option value="@Drivetrain.AWD">AWD</option>
+                <option value="@Drivetrain.RWD">RWD</option>
+                <option value="@Drivetrain.FWD">FWD</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Add" />
+        </p>
+    </form>
+</div>
+
+@if (!validationErrors.IsNullOrEmpty())
+{
+    @await Html.PartialAsync("_ValidationFailed", validationErrors)
+}
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

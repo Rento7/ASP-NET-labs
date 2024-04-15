@@ -1,0 +1,14 @@
+﻿@model IEnumerable<IDemoViewModel>
+
+@if (!Model.IsNullOrEmpty())
+{
+    @foreach (IDemoViewModel viewModel in Model)
+    {
+        <div style="border:1px solid; margin:4px">
+            <label>PositiveNumber: @viewModel.PositiveNumber </label> <br />
+            <label>NegativeNumber: @viewModel.NegativeNumber </label> <br />
+            <label>ShortText: @viewModel.ShortText </label> <br />
+            <label>LongText: @viewModel.LongText </label>
+        </div>
+    }
+}

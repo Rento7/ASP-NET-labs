@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Demo Page";
+}
+
+@model DemoViewModel
+
+<div>
+    @await Component.InvokeAsync("DemoViewModelList")
+</div>
+
+<hr />
+
+<h4>Post form</h4>
+
+<div style="border:2px solid; padding:8px">
+
+    <form method="post" asp-action="Create">
+        <p>
+            <label asp-for="PositiveNumber">PositiveNumber:</label><br />
+            <input type="number" asp-for="PositiveNumber" />
+            <span asp-validation-for="PositiveNumber" />
+        </p>
+        <p>
+            <label asp-for="NegativeNumber">NegativeNumber:</label><br />
+            <input type="number" asp-for="NegativeNumber" />
+            <span asp-validation-for="NegativeNumber" />
+        </p>
+        <p>
+            <label asp-for="ShortText">ShortText:</label><br />
+            <input type="text" asp-for="ShortText" />
+            <span asp-validation-for="ShortText" />
+        </p>
+        <p>
+            <label asp-for="LongText">LongText:</label><br />
+            <input type="text" asp-for="LongText" />
+            <span asp-validation-for="LongText" />
+
+        </p>
+        <p>
+            <input type="submit" value="Add" />
+        </p>
+    </form>
+</div>
+
+
+<form>
+    <button asp-action="ThrowRandomException" type="submit" style="width:150px; margin-top:4px">Throw random exception</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

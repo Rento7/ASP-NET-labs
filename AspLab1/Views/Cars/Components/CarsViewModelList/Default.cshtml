@@ -1,0 +1,17 @@
+﻿@using System.Linq
+@model IEnumerable<ICarViewModel>
+
+@if (!Model.IsNullOrEmpty())
+{
+    @foreach (ICarViewModel viewModel in Model)
+    {
+        <div style="border:1px solid; margin:4px">
+            <label>Owner: @viewModel.OwnerFullName </label> <br />
+            <label>Model name: @viewModel.Name</label> <br />
+            <label>Registration plate: @viewModel.RegistrationPlate </label> <br />
+            <label>Engine volume: @viewModel.EngineVolume</label> <br />
+            <label>Mileage: @viewModel.Mileage </label>  <br />
+            <label>Drivetrain: @viewModel.Drivetrain </label>
+        </div>
+    }
+}

@@ -1,0 +1,11 @@
+﻿@model IEnumerable<string>
+
+@if (!Model.IsNullOrEmpty())
+{
+    <div style="border:2px solid; border-color: red; padding:8px; margin-top: 4px">
+        @foreach (var error in Model)
+        {
+            <label>@error</label> <br />
+        }
+    </div>
+}
