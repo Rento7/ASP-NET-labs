@@ -106,7 +106,8 @@ namespace TodoControllerApi
             if (!todoService.Add(item))
                 return TypedResults.BadRequest();
 
-            return TypedResults.CreatedAtRoute(item, nameof(CreateTodoItem), new { id = item.Id });
+             
+            return TypedResults.Created($"/todoitems/{item.Id}", item);
         }
 
         /// <summary>
