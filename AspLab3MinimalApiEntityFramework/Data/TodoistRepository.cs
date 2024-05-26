@@ -157,24 +157,33 @@ namespace AspLab3MinimalApiEntityFramework.Data
             userToUpdate.Email = user.Email;
             userToUpdate.Username = user.Username;
 
+            _context.Users.Update(userToUpdate);
+            var ress = await _context.SaveChangesAsync();
+
             if (user.Settings != null) 
             {
-                if (userToUpdate.Settings == null)
-                    userToUpdate.Settings = new UserSettings();
+                bool toCreate = false;
+                var settignToUpdate = await _context.UserSettings.FirstOrDefaultAsync(e => e.UserId == userToUpdate.Id);
+                if (settignToUpdate == null) 
+                {
+                    toCreate = true;
 
-                var settignToUpdate = userToUpdate.Settings;
+                    settignToUpdate = new UserSettings();
+                    settignToUpdate.UserId = userToUpdate.Id;
+                }
+
                 var settings = user.Settings;
 
-                settignToUpdate.Id = userToUpdate.Id;
-                settignToUpdate.UserId = userToUpdate.Id;
                 settignToUpdate.DarkTheme = settings.DarkTheme;
-                settignToUpdate.NotificationEnabled= settings.NotificationEnabled;
+                settignToUpdate.NotificationEnabled = settings.NotificationEnabled;
                 settignToUpdate.Language = settings.Language;
                 settignToUpdate.DarkTheme = settings.DarkTheme;
-                settignToUpdate.User = userToUpdate;
-            }
 
-            _context.Users.Update(userToUpdate);
+                if (toCreate) 
+                    _context.UserSettings.Add(settignToUpdate);
+                else
+                    _context.UserSettings.Update(settignToUpdate);
+            }
 
             return await _context.SaveChangesAsync() == 1 ?
                 new ResponseModel 
