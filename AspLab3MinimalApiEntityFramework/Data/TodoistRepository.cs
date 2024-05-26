@@ -1,10 +1,5 @@
-﻿
-using AspLab3MinimalApiEntityFramework.Models;
-using Microsoft.AspNetCore.Http;
+﻿using AspLab3MinimalApiEntityFramework.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Linq.Expressions;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace AspLab3MinimalApiEntityFramework.Data
 {

@@ -1,5 +1,4 @@
-﻿
-namespace AspLab3MinimalApiEntityFramework.Models
+﻿namespace AspLab3MinimalApiEntityFramework.Models
 {
     public class User
     {

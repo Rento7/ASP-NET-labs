@@ -1,8 +1,6 @@
 ﻿using AspLab3MinimalApiEntityFramework.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
-using System.Reflection.Metadata;
-
 namespace AspLab3MinimalApiEntityFramework.Data
 {
     public class TodoistContext : DbContext

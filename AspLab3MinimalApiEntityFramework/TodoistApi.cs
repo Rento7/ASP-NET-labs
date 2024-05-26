@@ -1,8 +1,6 @@
 ﻿using AspLab3MinimalApiEntityFramework.Data;
 using AspLab3MinimalApiEntityFramework.Models;
 using AspLab3MinimalApiEntityFramework.Utility;
-using Azure;
-using System.Collections.Generic;
 
 namespace AspLab3MinimalApiEntityFramework
 {
@@ -14,7 +12,7 @@ namespace AspLab3MinimalApiEntityFramework
         /// <returns>all users</returns>
         /// <response code="200">Returns all users</response>
         /// <response code="404">No users were found</response>
-        public static async Task<IResult> GetAllUsers(ITodoistRepository repository)
+        public static async Task<IResult> GetAllUsers(IReadonlyTodoistRepository repository)
         {
             var response = await repository.GetAllUsersAsync();
 
@@ -36,7 +34,7 @@ namespace AspLab3MinimalApiEntityFramework
         /// <returns>specific user by id</returns>
         /// <response code="200">Returns the requested user </response>
         /// <response code="404">User was not found</response>
-        public static async Task<IResult> GetUserById(int id, ITodoistRepository repository)
+        public static async Task<IResult> GetUserById(int id, IReadonlyTodoistRepository repository)
         {
             var response = await repository.GetUserByIdAsync(id);
 
@@ -57,7 +55,7 @@ namespace AspLab3MinimalApiEntityFramework
         /// <returns>all todos</returns>
         /// <response code="200">Returns all todos</response>
         /// <response code="404">No todos were found</response>
-        public static async Task<IResult> GetAllTodos(ITodoistRepository repository)
+        public static async Task<IResult> GetAllTodos(IReadonlyTodoistRepository repository)
         {
             var response = await repository.GetAllTodosAsync();
 
@@ -79,7 +77,7 @@ namespace AspLab3MinimalApiEntityFramework
         /// <returns>all todos of user</returns>
         /// <response code="200">Returns the requested todos of specific user</response>
         /// <response code="404">No todos were found</response>
-        public static async Task<IResult> GetAllTodosByUser(int userId, ITodoistRepository repository)
+        public static async Task<IResult> GetAllTodosByUser(int userId, IReadonlyTodoistRepository repository)
         {
             var response = await repository.GetAllTodosByUserAsync(userId);
 
@@ -101,7 +99,7 @@ namespace AspLab3MinimalApiEntityFramework
         /// <returns>specific todo</returns>
         /// <response code="200">Returns the requested todo</response>
         /// <response code="404">Todo was not found</response>
-        public static async Task<IResult> GetTodoById(int id, ITodoistRepository repository)
+        public static async Task<IResult> GetTodoById(int id, IReadonlyTodoistRepository repository)
         {
             var response = await repository.GetTodoByIdAsync(id);
 

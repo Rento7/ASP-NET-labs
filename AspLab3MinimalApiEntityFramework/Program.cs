@@ -1,7 +1,7 @@
 using AspLab3MinimalApiEntityFramework.Data;
 using AspLab3MinimalApiEntityFramework.Models;
 using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
+using Microsoft.Extensions.Caching.Memory;
 using System.Reflection;
 
 namespace AspLab3MinimalApiEntityFramework
@@ -22,10 +22,14 @@ namespace AspLab3MinimalApiEntityFramework
             });
 
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
             builder.Services.AddDbContext<TodoistContext>(options =>
                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+            builder.Services.AddSingleton<IMemoryCache, MemoryCache>();
+
             builder.Services.AddScoped<ITodoistRepository, TodoistRepository>();
+            builder.Services.AddScoped<IReadonlyTodoistRepository, CachedTodoistRepository>();
 
             var app = builder.Build();
 
