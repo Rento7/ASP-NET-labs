@@ -158,7 +158,7 @@ namespace AspLab3MinimalApiEntityFramework.Data
             userToUpdate.Username = user.Username;
 
             _context.Users.Update(userToUpdate);
-            var ress = await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 
             if (user.Settings != null) 
             {
@@ -243,8 +243,11 @@ namespace AspLab3MinimalApiEntityFramework.Data
                     StatusCode = StatusCodes.Status404NotFound
                 };
 
+            var todosToDelete = _context.Todos.Where(e => e.UserId == id).Count();
+            
             _context.Users.Remove(userData.Data);
-            return await _context.SaveChangesAsync() == 1 ?
+
+            return await _context.SaveChangesAsync() == (1 + todosToDelete) ?
                 new ResponseModel 
                 {
                     Success = true,
