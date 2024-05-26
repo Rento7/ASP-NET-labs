@@ -24,7 +24,7 @@ namespace AspLab3MinimalApiEntityFramework.Data
 
         public async Task<IResponseDataModel<User>> GetUserByIdAsync(int id)
         {
-            var user = await _context.Users.FindAsync(id);
+            var user = await _context.Users.Include(e => e.Todos).FirstOrDefaultAsync(e => e.Id == id);
             return user != null ?
                     new ResponseDataModel<User>
                     { 
