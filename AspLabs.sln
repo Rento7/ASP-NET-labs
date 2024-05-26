@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoService", "AspLab2\Todo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspLab2TodoMinimalApi", "AspLab2\TodoMinimalApi\AspLab2TodoMinimalApi.csproj", "{C909AB6E-D3D1-4BA2-BE02-1784DE719CD8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspLab3", "AspLab3", "{D0B8B16E-B4EA-4B3B-83BE-59110D9F319F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspLab3MinimalApiEntityFramework", "AspLab3MinimalApiEntityFramework\AspLab3MinimalApiEntityFramework.csproj", "{A9D932A9-81D8-4508-BCAA-3564A7DAB298}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,10 @@ Global
 		{C909AB6E-D3D1-4BA2-BE02-1784DE719CD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C909AB6E-D3D1-4BA2-BE02-1784DE719CD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C909AB6E-D3D1-4BA2-BE02-1784DE719CD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9D932A9-81D8-4508-BCAA-3564A7DAB298}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9D932A9-81D8-4508-BCAA-3564A7DAB298}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9D932A9-81D8-4508-BCAA-3564A7DAB298}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9D932A9-81D8-4508-BCAA-3564A7DAB298}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +51,7 @@ Global
 		{191E7F90-1E7D-42F1-86E3-8AD48FBB3D15} = {8A88FC3F-FC94-46DE-B147-48650742AAE0}
 		{70398E9B-70AE-496B-BC4D-7EFE958A3966} = {8A88FC3F-FC94-46DE-B147-48650742AAE0}
 		{C909AB6E-D3D1-4BA2-BE02-1784DE719CD8} = {8A88FC3F-FC94-46DE-B147-48650742AAE0}
+		{A9D932A9-81D8-4508-BCAA-3564A7DAB298} = {D0B8B16E-B4EA-4B3B-83BE-59110D9F319F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FE251855-3CD0-4448-B588-E5DB3EDBF03F}

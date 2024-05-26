@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TodoService;
 
-namespace TodoControllerApi.Controllers
+namespace TodoMinimalApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]

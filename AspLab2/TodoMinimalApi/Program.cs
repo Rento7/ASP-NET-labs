@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Reflection;
 using TodoService;
 
-namespace TodoControllerApi
+namespace TodoMinimalApi
 {
     public class Program
     {
@@ -44,7 +44,7 @@ namespace TodoControllerApi
         /// Get all TodoItems.
         /// </summary>
         /// <returns>all todos</returns>
-        /// <response code="200">Returns the requested TodoItem</response>
+        /// <response code="200">Returns all TodoItems</response>
         /// <response code="404">No items were found</response>
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -63,7 +63,7 @@ namespace TodoControllerApi
         /// </summary>
         /// <param name="id"></param>
         /// <returns>the requested TodoItem</returns>
-        /// <response code="200">Returns the requested todos</response>
+        /// <response code="200">Returns the requested TodoItem</response>
         /// <response code="404">No items were found</response>
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -114,7 +114,7 @@ namespace TodoControllerApi
         /// Creates a TodoItem.
         /// </summary>
         /// <param name="item"></param>
-        /// <returns>A newly created TodoItem</returns>
+        /// <returns>An updated TodoItem</returns>
         /// <remarks>
         /// Sample request:
         ///

@@ -1,7 +1,7 @@
 using System.Reflection;
 using TodoService;
 
-namespace TodoControllerApi
+namespace TodoMinimalApi
 {
     public class Program
     {
