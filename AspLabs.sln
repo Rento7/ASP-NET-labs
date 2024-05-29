@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspLab2TodoMinimalApi", "As
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspLab3", "AspLab3", "{D0B8B16E-B4EA-4B3B-83BE-59110D9F319F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspLab3MinimalApiEntityFramework", "AspLab3MinimalApiEntityFramework\AspLab3MinimalApiEntityFramework.csproj", "{A9D932A9-81D8-4508-BCAA-3564A7DAB298}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspLab3MinimalApiEntityFramework", "AspLab3MinimalApiEntityFramework\AspLab3MinimalApiEntityFramework.csproj", "{A9D932A9-81D8-4508-BCAA-3564A7DAB298}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspLab4Authorization", "AspLab4Authorization\AspLab4Authorization.csproj", "{BF932A04-D647-42FA-8F77-66C40B172CAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{A9D932A9-81D8-4508-BCAA-3564A7DAB298}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9D932A9-81D8-4508-BCAA-3564A7DAB298}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9D932A9-81D8-4508-BCAA-3564A7DAB298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF932A04-D647-42FA-8F77-66C40B172CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF932A04-D647-42FA-8F77-66C40B172CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF932A04-D647-42FA-8F77-66C40B172CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF932A04-D647-42FA-8F77-66C40B172CAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
