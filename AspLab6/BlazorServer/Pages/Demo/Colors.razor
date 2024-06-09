@@ -1,0 +1,16 @@
+﻿@using Microsoft.FluentUI.AspNetCore.Components
+@using BlazorServer.Components
+@using BlazorServer.Services
+
+@page "/demo/colors"
+
+@inject IColorService colorService
+
+
+<div style="margin-left: auto; margin-right: auto; width:800px;">
+    <ColorPicker @bind-Color="@colorService.Color1" />
+    <ColorPicker @bind-Color="@colorService.Color2" />
+    <ColorPicker @bind-Color="@colorService.Color3" />
+</div>
+
+ 

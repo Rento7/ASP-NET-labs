@@ -19,6 +19,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspLab3MinimalApiEntityFram
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspLab4Authorization", "AspLab4Authorization\AspLab4Authorization.csproj", "{BF932A04-D647-42FA-8F77-66C40B172CAD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspLab6", "AspLab6", "{0092E41A-F337-4AB6-9428-344D1DE06895}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServer", "AspLab6\BlazorServer\BlazorServer.csproj", "{ADFED826-92D1-4C8C-8BBA-FE5241EBEAD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,10 @@ Global
 		{BF932A04-D647-42FA-8F77-66C40B172CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF932A04-D647-42FA-8F77-66C40B172CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF932A04-D647-42FA-8F77-66C40B172CAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADFED826-92D1-4C8C-8BBA-FE5241EBEAD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADFED826-92D1-4C8C-8BBA-FE5241EBEAD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADFED826-92D1-4C8C-8BBA-FE5241EBEAD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADFED826-92D1-4C8C-8BBA-FE5241EBEAD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +66,7 @@ Global
 		{70398E9B-70AE-496B-BC4D-7EFE958A3966} = {8A88FC3F-FC94-46DE-B147-48650742AAE0}
 		{C909AB6E-D3D1-4BA2-BE02-1784DE719CD8} = {8A88FC3F-FC94-46DE-B147-48650742AAE0}
 		{A9D932A9-81D8-4508-BCAA-3564A7DAB298} = {D0B8B16E-B4EA-4B3B-83BE-59110D9F319F}
+		{ADFED826-92D1-4C8C-8BBA-FE5241EBEAD7} = {0092E41A-F337-4AB6-9428-344D1DE06895}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FE251855-3CD0-4448-B588-E5DB3EDBF03F}

@@ -1,0 +1,46 @@
+﻿@using Microsoft.FluentUI.AspNetCore.Components
+@using BlazorServer.Services
+@using BlazorServer.Components
+@using BlazorServer.Data
+
+@inject ITodoService todoService
+
+@page "/"
+@page "/demo/todos"
+
+@*hardcoded width, have no desire to dig into css*@
+
+<div style="margin-left: auto; margin-right: auto; width:800px;">
+    <FluentAccordion>
+        <FluentAccordionItem Heading="Todo">
+            <FluentListbox Items="@_todos" 
+                           TOption="ITodoItem" 
+                           OptionValue="@(todo => todo.Id.ToString())"
+                           @bind-SelectedOption="@_selectedTodo"
+                           @bind-Value="@_selectedValue">
+                <OptionTemplate>
+                    <TodoItemComponent Todo="@context"/>
+                </OptionTemplate>
+            </FluentListbox>
+        </FluentAccordionItem>
+    </FluentAccordion>
+
+    <div style="display:flex; width:800px; justify-content:space-between; border-width:1px; border-style:solid; border-color:green; padding:8px;">
+        <FluentTextField @bind-Value="@_newTodoName" Style="width:100%" />
+        <FluentButton OnClick="@TodoAdd">
+            Add
+        </FluentButton>
+            
+    </div>
+
+
+    @if (@_selectedTodo != null)
+    {
+        <div style="display:flex; width:800px; justify-content:space-between; border-width:1px; border-color:mediumpurple; border-style:solid; padding:8px;">
+            <FluentTextField @bind-Value="@SelectedName" Style="width:100%" />
+            <FluentButton OnClick="@TodoRemove">
+                Remove
+            </FluentButton>
+        </div>
+    }
+</div>

@@ -1,0 +1,28 @@
+﻿@inherits LayoutComponentBase
+
+@using Microsoft.FluentUI.AspNetCore.Components
+@using BlazorServer.Components
+
+<PageTitle>BlazorServer</PageTitle>
+
+<FluentToastProvider />
+<FluentDialogProvider />
+<FluentTooltipProvider />
+<FluentMessageBarProvider />
+
+<div>
+    <main>
+        <div class="top-row px-4">
+            <a href="https://github.com/Rento7/ASP-NET-labs/tree/master/AspLab6/BlazorRazor" target="_blank">
+                Letuchyi Oleksandr Lab6
+            </a>
+        </div>
+
+        <Menu/>
+
+        <FluentBodyContent>
+            @Body
+        </FluentBodyContent>
+    </main>
+</div>
+

@@ -1,0 +1,17 @@
+﻿@page "/demo/counter"
+
+<PageTitle>Counter</PageTitle>
+
+<div style="margin-left: auto; margin-right: auto; width:800px;">
+    <h3>Counter</h3>
+    <button class="btn btn-primary" @onclick="IncrementCount">Clicks @currentCount </button>
+</div>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

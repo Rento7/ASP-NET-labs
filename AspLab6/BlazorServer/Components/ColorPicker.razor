@@ -1,0 +1,15 @@
+﻿<input type="color" id="head" name="head" value="@Color" @onchange="@UpdateIt" style="width:100%">
+ 
+@code {
+    [Parameter]
+    public string Color { get; set; }
+
+    [Parameter]
+    public EventCallback<string> ColorChanged { get; set; }
+
+    private void UpdateIt(ChangeEventArgs e)
+    {
+        Color = e.Value.ToString();
+        ColorChanged.InvokeAsync(Color);
+    }
+}

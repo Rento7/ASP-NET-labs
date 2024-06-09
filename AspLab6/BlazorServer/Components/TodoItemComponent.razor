@@ -1,0 +1,12 @@
+﻿@using Microsoft.FluentUI.AspNetCore.Components
+@namespace BlazorServer.Components
+
+<div class="item">
+    <div>
+        @Todo.Name
+    </div>
+    <div>
+        <FluentCheckbox Value="@Todo.IsComplete" ValueChanged="@OnTodoCompleteChanged"/>
+    </div>
+</div>
+ 
